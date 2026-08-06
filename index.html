@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Daria Yu portfolio for overseas market operations, lead qualification, research, and AI product growth.">
+  <title>Daria Yu | Overseas Market Operations Portfolio</title>
+  <style>
+    :root{--bg:#090c0a;--panel:#121713;--ink:#f3f6ef;--muted:#a5aea5;--lime:#b7ff35;--line:#303830;--danger:#ff8066}
+    *{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,"Helvetica Neue",sans-serif;overflow:hidden}
+    button{font:inherit}.deck{height:100dvh}.slide{display:none;width:100vw;height:100dvh;padding:3.2vw 5vw 4.8vw;position:relative;overflow:hidden;background:var(--bg)}.slide.active{display:block}
+    .slide:after{content:"";position:absolute;right:-13vw;top:-10vh;width:38vw;height:120vh;background:rgba(183,255,53,.035);transform:skewX(-20deg);pointer-events:none}
+    .top{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:12px;margin-bottom:4.5vh;position:relative;z-index:2}
+    .eyebrow,.context,.counter,.mono{font:700 12px/1.25 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase}.eyebrow,.counter{color:var(--lime)}.context{color:var(--muted)}
+    h1,h2,h3,p{margin-top:0}h1{font-size:clamp(54px,6.5vw,108px);line-height:.94;letter-spacing:-.055em;margin:0 0 3vh;max-width:82vw}h2{font-size:clamp(38px,4.25vw,70px);line-height:1.02;letter-spacing:-.045em;margin:0 0 3vh;max-width:78vw}h3{font-size:clamp(21px,2vw,32px);line-height:1.15}h1 em,h2 em{font-style:normal;color:var(--lime)}
+    .lead{font-size:clamp(16px,1.35vw,24px);line-height:1.55;color:var(--muted);max-width:72vw}.counter{position:absolute;right:5vw;bottom:2.7vh;z-index:3}
+    .hero{height:70vh;display:grid;grid-template-columns:1.45fr .72fr;gap:6vw;align-items:end}.hero-note{border-left:4px solid var(--lime);padding-left:22px;font-size:clamp(16px,1.25vw,21px);line-height:1.7;font-weight:700;white-space:nowrap}.hero-note small{display:block;color:var(--muted);font:700 11px ui-monospace;margin-bottom:15px;text-transform:uppercase;letter-spacing:.08em}
+    .thesis{margin:4vh 0 0;max-width:78vw;font-size:clamp(24px,2.35vw,39px);line-height:1.2;letter-spacing:-.025em}.thesis b{color:var(--lime)}
+    .chain{display:grid;grid-template-columns:repeat(4,1fr);margin-top:5vh;border-top:1px solid var(--line)}.chain article{padding:24px 22px 0 0;border-right:1px solid var(--line);min-height:190px}.chain small{display:block;color:var(--lime);font:700 12px ui-monospace;margin-bottom:22px}.chain p{color:var(--muted);line-height:1.5;max-width:25ch}
+    .split{display:grid;grid-template-columns:1.3fr .75fr;gap:5vw;align-items:start}.split.solo{display:block;max-width:82vw}.rows{margin-top:3vh}.row{display:grid;grid-template-columns:145px 1fr;gap:20px;padding:13px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.4}.row b{color:var(--lime)}
+    .field-note{background:var(--lime);color:#101410;padding:30px;margin-top:5vh;position:relative;z-index:2}.field-note small{font:700 11px ui-monospace;text-transform:uppercase}.field-note h3{margin:16px 0}.field-note p{line-height:1.55;margin:0}
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);margin-top:3.5vh}.flow div{border:1px solid var(--line);border-right:0;padding:18px;min-height:112px}.flow div:last-child{border-right:1px solid var(--line)}.flow b{display:block;color:var(--lime);font:700 11px ui-monospace;margin-bottom:18px}.flow span{font-weight:700;line-height:1.35}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);margin-top:4vh}.metric{padding-right:24px}.metric strong{display:block;color:var(--lime);font-size:clamp(35px,4vw,68px);letter-spacing:-.06em}.metric p{color:var(--muted);line-height:1.42;max-width:24ch}.note{font-size:12px;color:var(--muted);margin-top:2vh}
+    .brief{display:grid;grid-template-columns:.8fr 1.2fr;gap:5vw}.brief-list article{display:grid;grid-template-columns:135px 1fr;gap:18px;border-top:1px solid var(--line);padding:14px 0}.brief-list b{color:var(--lime);font:700 11px ui-monospace;text-transform:uppercase}.brief-list p{margin:0;line-height:1.45}.constraint{color:var(--muted)}
+    .evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:4vh}.evidence article{background:var(--bg);padding:25px;min-height:210px}.evidence small{color:var(--lime);font:700 11px ui-monospace;text-transform:uppercase}.evidence h3{margin:28px 0 12px}.evidence p{color:var(--muted);line-height:1.48}
+    .media{display:grid;grid-template-columns:.92fr 1.08fr;gap:4vw;align-items:start}.media h2{font-size:clamp(35px,3.55vw,58px);max-width:100%}.media .lead{font-size:clamp(15px,1.1vw,19px);line-height:1.48}.shot{margin:0;background:var(--panel);border:1px solid var(--line);position:relative;z-index:2;align-self:start}.shot img{display:block;width:100%;height:45vh;object-fit:contain;background:#fff}.shot figcaption{background:var(--panel);padding:12px 15px;font:12px ui-monospace;color:var(--ink)}
+    .loop{display:grid;grid-template-columns:repeat(7,auto);align-items:center;margin-top:5vh}.loop div{border:1px solid var(--line);min-height:120px;padding:18px}.loop i{font-style:normal;color:var(--lime);font-size:24px;text-align:center}.loop b{display:block;color:var(--lime);font:700 11px ui-monospace;margin-bottom:17px}.loop span{font-weight:700;line-height:1.35}
+    .different{display:grid;grid-template-columns:repeat(4,1fr);margin-top:4vh;border-top:1px solid var(--line)}.different article{padding:23px;border-right:1px solid var(--line);min-height:230px}.different small{color:var(--lime);font:700 12px ui-monospace}.different h3{font-size:23px;margin:25px 0 12px}.different p{color:var(--muted);line-height:1.48}
+    .answer{font-size:clamp(17px,1.25vw,23px);line-height:1.42;max-width:86vw;margin:1vh 0 0}.answer strong{color:var(--lime)}.wordcount{margin:2vh 0 0;max-width:86vw;color:var(--muted);font:700 11px ui-monospace;text-transform:uppercase}
+    .fit{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:5vh}.fit article{border-top:4px solid var(--lime);padding:22px 0}.fit h3{margin:0 0 16px}.fit p{color:var(--muted);line-height:1.5;max-width:33ch}.fit b{color:var(--ink)}
+    .end{height:72vh;display:flex;flex-direction:column;justify-content:center}.end p{max-width:720px}.contact{margin-top:5vh;color:var(--lime);font:700 15px ui-monospace}
+    .progress{position:fixed;z-index:30;left:0;top:0;height:5px;background:var(--lime);transition:width .25s}.nav{position:fixed;z-index:30;right:3vw;bottom:2vh;display:flex;align-items:center;gap:8px;background:#070907;border:1px solid var(--line);padding:6px}.nav button{width:42px;height:36px;background:transparent;color:var(--ink);border:0;font-size:20px;cursor:pointer}.nav button:active{transform:translateY(1px)}.nav .count{min-width:62px;text-align:center;font:700 11px ui-monospace}.hint{position:fixed;z-index:25;left:3vw;bottom:2.6vh;color:#7e877e;font:11px ui-monospace}
+    :focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+    @media(max-width:900px){.slide{padding:7vw 6vw 12vw;overflow:auto}.top{margin-bottom:3vh}.hero,.split,.brief,.media{grid-template-columns:1fr}.hero{height:auto}.hero-note,.field-note,.shot{display:none}h1{font-size:14vw;max-width:100%}h2{font-size:9vw;max-width:100%}.lead{max-width:100%}.thesis{margin-left:0;max-width:100%}.chain,.metrics,.evidence,.different,.fit{grid-template-columns:1fr 1fr}.flow,.loop{grid-template-columns:1fr}.loop i{transform:rotate(90deg)}.hint{display:none}.answer{font-size:18px;max-width:100%}.wordcount{max-width:100%}}
+    @media(prefers-reduced-motion:reduce){.progress{transition:none}}
+    @media print{html,body{overflow:visible}.slide{display:block!important;page-break-after:always;width:100vw;height:100vh}.nav,.progress,.hint{display:none!important}}
+  </style>
+</head>
+<body>
+  <div class="progress"></div>
+  <main class="deck">
+    <section class="slide active" id="slide-1">
+      <header class="top"><span class="eyebrow">Daria Yu / Portfolio 2026</span><span class="context">Overseas Market Operations</span></header>
+      <div class="hero"><div><h1>From market signals to <em>repeatable workflows.</em></h1><p class="lead">I qualify overseas demand, turn scattered evidence into operating rules, and translate product observations into measurable growth actions.</p></div><aside class="hero-note"><small>Selected evidence</small>UAE lead qualification<br>Reddit research brief<br>Hailuo growth analysis</aside></div>
+      <span class="counter">01 / 12</span>
+    </section>
+
+    <section class="slide" id="slide-2">
+      <header class="top"><span class="eyebrow">How I Work</span><span class="context">Signal to Action</span></header>
+      <h2>I do not stop at collecting information. I decide <em>what deserves action.</em></h2>
+      <div class="chain"><article><small>01</small><h3>Capture</h3><p>Collect customer messages, behavior, platform rules, and product observations.</p></article><article><small>02</small><h3>Qualify</h3><p>Separate high-intent signals from noise using explicit criteria.</p></article><article><small>03</small><h3>Route</h3><p>Assign ownership, required fields, and the next action.</p></article><article><small>04</small><h3>Learn</h3><p>Track outcomes and update the workflow when evidence changes.</p></article></div>
+      <p class="thesis">The common thread is simple: <b>turn judgment into a system that a team can reuse.</b></p>
+      <span class="counter">02 / 12</span>
+    </section>
+
+    <section class="slide" id="slide-3">
+      <header class="top"><span class="eyebrow">UAE Market Operations</span><span class="context">Lead Qualification</span></header>
+      <div class="split solo"><div><h2>Content created inquiries. <em>Qualification created opportunities.</em></h2><p class="lead">For a building materials marketplace in Sharjah, I handled inquiries from TikTok, Instagram, and Facebook, then rebuilt the initial screening logic for a new project.</p><div class="rows"><div class="row"><b>Capture</b><span>Move fragmented social messages into WhatsApp and the CRM.</span></div><div class="row"><b>Qualify</b><span>Check identity, service need, location, project stage, budget, floor plan, and target completion date.</span></div><div class="row"><b>Route</b><span>Assign a salesperson or designer with the context needed to continue.</span></div><div class="row"><b>Follow through</b><span>Track visits, quotations, deposits, missing fields, and the next action.</span></div></div></div></div>
+      <span class="counter">03 / 12</span>
+    </section>
+
+    <section class="slide" id="slide-4">
+      <header class="top"><span class="eyebrow">UAE Operating System</span><span class="context">SOP and CRM</span></header>
+      <h2>I turned chat histories into a funnel that was <em>visible and routable.</em></h2>
+      <div class="flow"><div><b>01</b><span>Content and paid traffic</span></div><div><b>02</b><span>WhatsApp intake</span></div><div><b>03</b><span>Intent and fit screening</span></div><div><b>04</b><span>Sales or designer assignment</span></div><div><b>05</b><span>Visit, quote, and status update</span></div></div>
+      <div class="metrics"><div class="metric"><strong>80-100</strong><p>daily inquiries observed during the operating period</p></div><div class="metric"><strong>20+</strong><p>daily leads with basic needs confirmed and moved into follow-up</p></div><div class="metric"><strong>2-4</strong><p>customer groups routed to sales or scheduled for a visit each day</p></div><div class="metric"><strong>SOP</strong><p>screening rules plus CRM fields for ownership and next actions</p></div></div>
+      <p class="note">Ranges are based on my work records and daily observations. They do not claim full-funnel revenue attribution.</p>
+      <span class="counter">04 / 12</span>
+    </section>
+
+    <section class="slide" id="slide-5">
+      <header class="top"><span class="eyebrow">Reddit Research Brief</span><span class="context">Evidence Before Narrative</span></header>
+      <div class="brief"><div><h2>Attention is a signal. It is <em>not demand.</em></h2><p class="lead">I reviewed recent discussions about buying, selling, and licensing AI-generated content, then tested the narrative against platform rules and counterexamples.</p><p class="constraint">Scope: 14 core Reddit threads from a broader cross-platform scan. The sample supports hypothesis formation, not market sizing or proof of product-market fit.</p></div><div class="brief-list"><article><b>Question</b><p>Where does AI content solve a real delivery problem, and where is supply only creating noise?</p></article><article><b>Method</b><p>Cluster discussions by transaction intent, delivery friction, trust, rights, and acquisition risk.</p></article><article><b>Finding</b><p>Buyers value usable outcomes more than generation volume. Quality assurance, rights, and specification remain costly.</p></article><article><b>Counter-signal</b><p>High engagement around generic AI products does not demonstrate repeat purchase or willingness to pay.</p></article><article><b>Next test</b><p>Validate a narrow, standardized deliverable with buyer interviews, paid trials, and repeat-order data.</p></article></div></div>
+      <span class="counter">05 / 12</span>
+    </section>
+
+    <section class="slide" id="slide-6">
+      <header class="top"><span class="eyebrow">Research Judgment</span><span class="context">What the Brief Changed</span></header>
+      <h2>The output was not a trend report. It was a <em>decision boundary.</em></h2>
+      <div class="evidence"><article><small>Proceed</small><h3>Narrow, task-ready deliverables</h3><p>Test offers with a clear specification, human quality control, and explicit usage rights.</p></article><article><small>Investigate</small><h3>Reddit intent research</h3><p>Use communities to discover language, objections, and public demand signals while keeping human review.</p></article><article><small>Do not assume</small><h3>A universal AI content marketplace</h3><p>Conversation volume alone cannot prove transactions, retention, or a defensible market.</p></article></div>
+      <p class="thesis">Good research reduces the number of things a team should do next.</p>
+      <span class="counter">06 / 12</span>
+    </section>
+
+    <section class="slide" id="slide-7">
+      <header class="top"><span class="eyebrow">Hailuo AI</span><span class="context">Product Test</span></header>
+      <div class="media"><div><h2>A successful generation is only the first step toward a <em>repeatable creator workflow.</em></h2><p class="lead">I completed one text-to-video and one image-to-video task, recording output quality, credits, wait feedback, background processing, and the path to download or share.</p><div class="rows"><div class="row"><b>Output</b><span>Both tests maintained subject structure and continuous motion.</span></div><div class="row"><b>Reliability</b><span>Generation continued after leaving the page.</span></div><div class="row"><b>Friction</b><span>Credits were deducted immediately, with no confirmation before submission.</span></div><div class="row"><b>Uncertainty</b><span>Queue status did not clearly communicate when the result would be ready.</span></div></div></div><figure class="shot"><img src="evidence-5.png" alt="Hailuo AI generation history and asset page"><figcaption>First-hand test record: text-to-video and image-to-video</figcaption></figure></div>
+      <span class="counter">07 / 12</span>
+    </section>
+
+    <section class="slide" id="slide-8">
+      <header class="top"><span class="eyebrow">Hailuo Overseas Growth</span><span class="context">Observed Growth Loop</span></header>
+      <h2>Hailuo made the product output carry its own <em>distribution.</em></h2>
+      <p class="lead">Free access lowered trial friction. Visually surprising, branded outputs travelled through X, Reddit, and TikTok, letting new users discover the product through a result rather than an advertisement.</p>
+      <div class="loop"><div><b>01</b><span>Low-friction trial</span></div><i>→</i><div><b>02</b><span>Surprising output</span></div><i>→</i><div><b>03</b><span>Social sharing</span></div><i>→</i><div><b>04</b><span>New user generation</span></div></div>
+      <p class="thesis"><b>Strength:</b> fast awareness and product proof. <b>Risk:</b> curiosity may not become repeat use or paid conversion.</p>
+      <span class="counter">08 / 12</span>
+    </section>
+
+    <section class="slide" id="slide-9">
+      <header class="top"><span class="eyebrow">What I Would Do Differently</span><span class="context">From Virality to Retention</span></header>
+      <h2>I would narrow the market before trying to <em>maximize reach.</em></h2>
+      <div class="different"><article><small>01</small><h3>Choose one job</h3><p>Start with short-form creators turning a still image into a six-second hook.</p></article><article><small>02</small><h3>Recruit a cohort</h3><p>Give selected creators the same weekly brief, prompt templates, and publishing deadline.</p></article><article><small>03</small><h3>Prove the edge</h3><p>Publish comparable results against alternatives, using motion quality, time, and cost.</p></article><article><small>04</small><h3>Measure the loop</h3><p>Track generation success, downloads, shares, seven-day return, and paid conversion.</p></article></div>
+      <p class="thesis">The goal is not more first generations. It is more creators who return with a second real job.</p>
+      <span class="counter">09 / 12</span>
+    </section>
+
+    <section class="slide" id="slide-10">
+      <header class="top"><span class="eyebrow">Application Response</span><span class="context">148 Words</span></header>
+      <p class="answer"><strong>Hailuo AI's early overseas growth</strong> came from making high-quality text-to-video generation easy to try. Free access reduced adoption friction, while users shared surprising, watermarked results across X, Reddit and TikTok. This turned product output into distribution: people discovered Hailuo through a video, not an advertisement.<br><br>I would have narrowed the first campaign to one repeatable use case, short-form creators turning a still image into a six-second hook, rather than attracting every curious AI user. I would recruit a small creator cohort, give them the same weekly brief and prompt templates, and publish side-by-side results against competing tools. The funnel would track generated videos, successful downloads, shares, seven-day return rate and paid conversion.<br><br>I would also replace uncertain queueing with an estimated completion time and email notification. Hailuo proved that spectacle can acquire users; I would focus earlier on whether creators could build a reliable, repeatable workflow around it.</p>
+      <p class="wordcount">Answer to: What did they do first, and what would you have done differently?</p>
+      <span class="counter">10 / 12</span>
+    </section>
+
+    <section class="slide" id="slide-11">
+      <header class="top"><span class="eyebrow">Role Fit</span><span class="context">Shulex / Voc.AI</span></header>
+      <h2>Three projects. One operating principle: <em>make signals usable.</em></h2>
+      <div class="fit"><article><h3>Qualify demand</h3><p><b>UAE operations</b> show how I defined useful lead information, routed ownership, and maintained next actions across teams.</p></article><article><h3>Research before scaling</h3><p><b>Reddit brief</b> shows how I separate engagement, intent, constraints, and counterevidence before recommending a market action.</p></article><article><h3>Turn product output into growth</h3><p><b>Hailuo analysis</b> connects product experience with social distribution, retention, conversion, and a testable campaign design.</p></article></div>
+      <p class="thesis">This is how I would approach cold-start products: find the signal, define the workflow, and keep the commercial outcome visible.</p>
+      <span class="counter">11 / 12</span>
+    </section>
+
+    <section class="slide" id="slide-12">
+      <header class="top"><span class="eyebrow">End</span><span class="context">Daria Yu / 2026</span></header>
+      <div class="end"><h1>Thank you.</h1><p class="lead">I am interested in overseas market work where research, content, customer signals, and AI workflows connect to measurable business outcomes.</p><p class="contact">DARIA YU · INTERNATIONAL BUSINESS</p></div>
+      <span class="counter">12 / 12</span>
+    </section>
+  </main>
+  <div class="hint">Arrow keys or space to navigate</div>
+  <nav class="nav" aria-label="Slide navigation"><button id="prev" aria-label="Previous slide">←</button><span class="count"></span><button id="next" aria-label="Next slide">→</button></nav>
+  <script>
+    const slides=[...document.querySelectorAll('.slide')];let index=0;const count=document.querySelector('.count');const progress=document.querySelector('.progress');
+    function show(next){index=(next+slides.length)%slides.length;slides.forEach((slide,i)=>slide.classList.toggle('active',i===index));count.textContent=String(index+1).padStart(2,'0')+' / '+slides.length;progress.style.width=((index+1)/slides.length*100)+'%';history.replaceState(null,'','#slide-'+(index+1));}
+    document.getElementById('prev').addEventListener('click',()=>show(index-1));document.getElementById('next').addEventListener('click',()=>show(index+1));
+    document.addEventListener('keydown',event=>{if(['ArrowRight','PageDown',' '].includes(event.key)){event.preventDefault();show(index+1)}if(['ArrowLeft','PageUp'].includes(event.key)){event.preventDefault();show(index-1)}});
+    const match=location.hash.match(/slide-(\d+)/);show(match?Number(match[1])-1:0);
+  </script>
+</body>
+</html>
